@@ -1,0 +1,8 @@
+* {
+    background: #141218;
+    on-background: #e6e1e9;
+    surface-container: #211f24;
+    primary: #cebdfe;
+    on-primary: #35275d;
+    outline: #948f99;
+}

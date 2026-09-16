@@ -1,0 +1,20 @@
+hi Comment guibg=None guifg=#46303e
+
+hi Delimiter guibg=None guifg=#6f4c59
+hi Operator guibg=None guifg=#6f4c59
+
+hi Todo guibg=None guifg=#845966
+
+hi Identifier guibg=None guifg=#080714
+hi Constant guibg=None guifg=#0f0a1a
+hi Type guibg=None guifg=#100f20
+hi String guibg=None guifg=#160c20
+hi Special guibg=None guifg=#101225
+hi PreProc guibg=None guifg=#101225
+hi Function guibg=None guifg=#130e23
+hi Statement guibg=None guifg=#151228
+
+hi Error guibg=#93000a guifg=#ffdad6
+hi StatusLine guibg=#cebdfe guifg=#35275d
+hi StatusLineNC guibg=#4c3e75 guifg=#e8ddff
+hi Selection guibg=#322330

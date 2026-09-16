@@ -1,0 +1,87 @@
+@import "colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @background;
+    color: @on_background;
+    border: 2px solid @outline;
+    border-radius: 12px;
+}
+
+#workspaces,
+#window,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#bluetooth,
+#battery,
+#tray,
+#custom-launcher {
+    background: @surface_container;
+    color: @on_background;
+    padding: 0 14px;
+    margin: 6px 3px;
+    border-radius: 10px;
+}
+
+#custom-launcher {
+    color: @on_primary;
+    background: @primary;
+    font-size: 16px;
+    padding: 0 18px 0 13px;
+    margin: 6px 6px 6px 8px;
+}
+#custom-launcher:hover {
+    background: @secondary;
+    color: @on_secondary;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+#workspaces button {
+    color: @outline;
+    padding: 0 10px;
+    background: transparent;
+    border-radius: 8px;
+}
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    font-weight: 700;
+}
+#workspaces button.empty {
+    color: @outline;
+}
+#workspaces button:hover:not(.active) {
+    color: @primary;
+}
+
+#window {
+    color: @secondary;
+    font-weight: 400;
+}
+
+#clock {
+    color: @primary;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#battery.warning { color: @error; }
+#battery.critical,
+#temperature.critical {
+    color: @on_error;
+    background: @error;
+}

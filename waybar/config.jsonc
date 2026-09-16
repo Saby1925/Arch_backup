@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "height": 34,
+    "margin-top": 8,
+    "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "memory",
+        "temperature",
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray"
+    ],
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+"hyprland/workspaces": {
+    "format": "{name}",
+    "persistent-workspaces": {
+        "*":5 
+    }
+},
+      "hyprland/window": {
+        "format": "󰣆  {}",
+        "max-length": 45
+    },
+
+"clock": {
+    "format": "󰥔  {:%a  %d %b  %I:%M %p}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt>{calendar}</tt>"
+},
+
+    "memory": {
+        "format": "󰘚  {}%",
+        "tooltip": true
+    },
+
+    "temperature": {
+        "format": "󰔏  {temperatureC}°C",
+        "critical-threshold": 80,
+        "tooltip": true
+    },
+
+    "network": {
+        "format-wifi": "󰖩  {signalStrength}%",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip-format": "{essid}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Muted",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "pavucontrol"
+    },
+
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 6
+    }
+}

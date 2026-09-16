@@ -1,0 +1,8 @@
+* {
+    background: {{colors.background.default.hex}};
+    on-background: {{colors.on_background.default.hex}};
+    surface-container: {{colors.surface_container.default.hex}};
+    primary: {{colors.primary.default.hex}};
+    on-primary: {{colors.on_primary.default.hex}};
+    outline: {{colors.outline.default.hex}};
+}

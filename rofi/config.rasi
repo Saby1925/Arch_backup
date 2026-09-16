@@ -1,0 +1,83 @@
+@import "colors.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 13";
+}
+
+window {
+    background-color: @background;
+    text-color: @on-background;
+    border: 2px;
+    border-color: @outline;
+    border-radius: 12px;
+    width: 900px;
+    location: center;
+    anchor: center;
+    padding: 24px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ "inputbar", "listview" ];
+    spacing: 18px;
+}
+
+inputbar {
+    background-color: @surface-container;
+    text-color: @on-background;
+    padding: 16px 20px;
+    border-radius: 10px;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @primary;
+    font: "JetBrainsMono Nerd Font Bold 14";
+    padding: 0px 12px 0px 0px;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @on-background;
+    placeholder: "Search...";
+    placeholder-color: @outline;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 10;
+    spacing: 6px;
+    padding: 4px 0px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element, element normal.normal, element alternate.normal {
+    background-color: @surface-container;
+    text-color: @on-background;
+    orientation: horizontal;
+    padding: 14px 18px;
+    spacing: 16px;
+    border-radius: 10px;
+}
+
+element-icon {
+    size: 32px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    font: "JetBrainsMono Nerd Font 13";
+}
+
+element selected.normal, element selected.active, element selected.urgent {
+    background-color: @primary;
+    text-color: @on-primary;
+}
