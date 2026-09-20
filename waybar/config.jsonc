@@ -3,10 +3,10 @@
     "position": "top",
 
     "height": 34,
-    "margin-top": 8,
+    "margin-top": 4,
     "margin-bottom": 0,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-left": 4,
+    "margin-right": 4,
 
     "modules-left": [
         "custom/launcher",
@@ -77,26 +77,30 @@
     },
 
 
-    "battery": {
-        "format": "{icon}  {capacity}%",
-        "format-icons": [
-            "󰂎",
-            "󰁺",
-            "󰁻",
-            "󰁼",
-            "󰁽",
-            "󰁾",
-            "󰁿",
-            "󰂀",
-            "󰂁",
-            "󰂂",
-            "󰁹"
-        ],
-        "states": {
-            "warning": 30,
-            "critical": 15
-        }
+"battery": {
+    "format": "{icon}  {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "format-plugged": "󰚥  {capacity}%",
+    "format-full": "󰁹  {capacity}%",
+    "format-icons": [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+    ],
+    "states": {
+        "warning": 30,
+        "critical": 15
     },
+    "tooltip-format": "{timeTo}"
+},
 
     "tray": {
         "icon-size": 14,

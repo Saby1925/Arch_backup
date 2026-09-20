@@ -85,3 +85,6 @@ window#waybar {
     color: @on_error;
     background: @error;
 }
+#battery.charging, #battery.plugged {
+    color: #a6e3a1;
+}

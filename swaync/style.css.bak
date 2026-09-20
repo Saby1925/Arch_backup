@@ -1,0 +1,234 @@
+/* palette (from the bar/terminal) */
+@define-color bg        rgba(10, 18, 16, 0.97);
+@define-color surface   rgba(24, 38, 34, 0.92);
+@define-color surface2  rgba(36, 54, 49, 0.95);
+@define-color accent    #7fd6c2;
+@define-color text      #cfe3db;
+@define-color muted     #7f9990;
+@define-color warn      #f2a2a0;
+@define-color info      #8fb8e0;
+
+* {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: @text;
+}
+
+.blank-window { background: transparent; }
+
+/* ---------- popups ---------- */
+.floating-notifications.background .notification-row .notification-background {
+  background: transparent;
+  box-shadow: none;
+}
+
+.notification-row { outline: none; }
+
+.notification {
+  background: @bg;
+  border: 1px solid alpha(@accent, 0.55);
+  border-radius: 10px;
+  margin: 6px 10px;
+  padding: 0;
+}
+
+.notification-content { padding: 10px 12px; background: transparent; }
+
+.notification.critical { border-color: @warn; }
+.notification.low { border-color: alpha(@muted, 0.5); }
+
+.summary { font-weight: bold; color: @accent; }
+.time    { color: @muted; font-size: 11px; }
+.body    { color: @text; }
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  border-radius: 10px;
+}
+.notification-default-action:hover { background: alpha(@accent, 0.08); }
+
+.notification-action {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.25);
+  border-radius: 10px;
+  margin: 4px;
+  padding: 4px 8px;
+}
+.notification-action:hover {
+  background: alpha(@accent, 0.2);
+  border-color: @accent;
+}
+
+.close-button {
+  background: @surface2;
+  color: @text;
+  border-radius: 999px;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 6px;
+  padding: 0;
+}
+.close-button:hover { background: @warn; color: #0a1210; }
+
+/* ---------- control center ---------- */
+.control-center {
+  background: @bg;
+  border: 1px solid alpha(@accent, 0.55);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.control-center .notification-row .notification-background {
+  background: transparent;
+}
+
+.control-center .notification {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.15);
+  border-radius: 10px;
+  margin: 4px 6px;
+}
+
+.control-center-list { background: transparent; }
+
+.widget-title { margin: 8px 10px 4px 10px; font-size: 15px; }
+.widget-title > label { font-weight: bold; color: @accent; }
+.widget-title > button {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.3);
+  border-radius: 999px;
+  padding: 2px 14px;
+}
+.widget-title > button:hover { background: @accent; }
+.widget-title > button:hover label { color: #0a1210; }
+
+/* dnd switch */
+.widget-dnd { margin: 6px 10px; }
+.widget-dnd > switch {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.3);
+  border-radius: 999px;
+}
+.widget-dnd > switch:checked { background: @accent; }
+.widget-dnd > switch slider {
+  background: @text;
+  border-radius: 999px;
+}
+.widget-dnd > switch:checked slider { background: #0a1210; }
+
+/* media */
+.widget-mpris { margin: 6px 10px; }
+.widget-mpris-player {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.2);
+  border-radius: 10px;
+  padding: 8px;
+}
+.widget-mpris-title { font-weight: bold; color: @accent; }
+.widget-mpris-subtitle { color: @muted; }
+.widget-mpris button {
+  background: transparent;
+  border-radius: 999px;
+}
+.widget-mpris button:hover { background: alpha(@accent, 0.2); }
+
+/* sliders */
+.widget-volume, .widget-backlight {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.2);
+  border-radius: 10px;
+  margin: 4px 10px;
+  padding: 6px 10px;
+}
+.widget-volume trough, .widget-backlight trough {
+  background: @surface2;
+  border-radius: 999px;
+  min-height: 6px;
+}
+.widget-volume trough highlight, .widget-backlight trough highlight {
+  background: @accent;
+  border-radius: 999px;
+}
+.widget-volume trough slider, .widget-backlight trough slider {
+  background: @text;
+  border-radius: 999px;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+/* ---------- quick toggles ---------- */
+.widget-buttons-grid {
+  background: transparent;
+  margin: 6px 10px;
+  padding: 0;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.25);
+  border-radius: 10px;
+  min-height: 44px;
+  margin: 3px;
+  padding: 0;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 18px;
+  color: @text;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: alpha(@accent, 0.2);
+  border-color: @accent;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background: @accent;
+  border-color: @accent;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:checked label {
+  color: #0a1210;
+}
+/* last button = shutdown */
+.widget-buttons-grid > flowbox > flowboxchild:last-child > button:hover {
+  background: @warn;
+  border-color: @warn;
+}
+.widget-buttons-grid > flowbox > flowboxchild:last-child > button:hover label {
+  color: #0a1210;
+}
+
+/* ---------- quick toggles ---------- */
+.widget-buttons-grid {
+  background: transparent;
+  margin: 6px 10px;
+  padding: 0;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: @surface;
+  border: 1px solid alpha(@accent, 0.25);
+  border-radius: 12px;
+  min-height: 44px;
+  margin: 3px;
+  padding: 0;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 18px;
+  color: @text;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: alpha(@accent, 0.2);
+  border-color: @accent;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background: @accent;
+  border-color: @accent;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:checked label {
+  color: #0a1210;
+}
+/* last button = shutdown */
+.widget-buttons-grid > flowbox > flowboxchild:last-child > button:hover {
+  background: @warn;
+  border-color: @warn;
+}
+.widget-buttons-grid > flowbox > flowboxchild:last-child > button:hover label {
+  color: #0a1210;
+}
